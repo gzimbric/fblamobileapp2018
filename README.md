@@ -10,7 +10,7 @@ QuizUP is a mobile app that quizzes you on a variety of FBLA topics. It has acco
 Useful Links
 -------------
 
- - [Screenshots](https://github.com/gzimbric/fblamobileapp2018/blob/master/quizup_photos.pdf)
+ - [Screenshots](https://github.com/gzimbric/fblamobileapp2018/blob/master/QuizUP%20Photos.pdf)
  - [IPA Download](https://github.com/gzimbric/fblamobileapp2018/raw/master/fblamobilequiz.ipa)
 
 Features
