@@ -39,7 +39,7 @@ Installation
  2. Open the archive and click on `fblamobilequiz.xcworkspace`
  3.  Once the project is loaded, select a device from the drop-down near the top-left corner (This can be a simulator or a real device)
  4. Once a device is selected, press the icon that is very similar to a play button to run the project.
- 5. If running on an actual device, make sure to accept any prompts so the app builds correctly. You also may need to go to Settings -> General -> Profile & Device Management -> Look under 'Developer Apps' -> Accept FundUP<br>
+ 5. If running on an actual device, make sure to accept any prompts so the app builds correctly. You also may need to go to Settings -> General -> Profile & Device Management -> Look under 'Developer Apps' -> Accept QuizUP<br>
 **Note:** If running on a device, make sure it is unlocked before it is plugged in.
 
 **In addition, QuizUP can also be installed using the precompiled IPA listed above**
@@ -56,7 +56,7 @@ Software Used
 
  - Xcode - IDE used to develop iOS applications
  - Swift - A fairly new programming language used within iOS applications
- - Firebase: A highly scabable realtime database used for FundUP's backend
+ - Firebase: A highly scabable realtime database used for QuizUP's backend
 
 When developing QuizUP, I used Xcode by Apple as my IDE (Integrated Development Enviornment) and I also used the lastest version of Swift (Version 4.2.3 at publish date) as my programming language. I used CocoaPods to easily install Firebase to connect to my backend and my graphical UI knowledge to build the app's design.
 
