@@ -10,7 +10,7 @@ QuizUP is a mobile app that quizzes you on a variety of FBLA topics. It has acco
 Useful Links
 -------------
 
- - [Screenshots](https://github.com/gzimbric/fblamobileapp/blob/master/fundup_photos.pdf)
+ - [Screenshots](https://github.com/gzimbric/fblamobileapp2018/blob/master/quizup_photos.pdf)
  - [IPA Download](https://github.com/gzimbric/fblamobileapp2018/raw/master/fblamobilequiz.ipa)
 
 Features
@@ -41,6 +41,8 @@ Installation
  4. Once a device is selected, press the icon that is very similar to a play button to run the project.
  5. If running on an actual device, make sure to accept any prompts so the app builds correctly. You also may need to go to Settings -> General -> Profile & Device Management -> Look under 'Developer Apps' -> Accept FundUP<br>
 **Note:** If running on a device, make sure it is unlocked before it is plugged in.
+
+**In addition, QuizUP can also be installed using the precompiled IPA listed above**
 
 Signing Fix
 -------------
