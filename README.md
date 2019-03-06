@@ -78,3 +78,4 @@ FundUP was built with XCode, CocoaPods, Firebase, and KingFisher.
  - XCode: Copyright © 2019 Apple Inc. All rights reserved.
  - CocoaPods: Copyright © 2019 CocoaPods. CocoaPods is licensed under the MIT license.
  - Firebase: Copyright © 2019 Alphabet Inc. All rights reserved.
+ - Imaging: Copyright © 2019 Future Business Leaders of America-Phi Beta Lambda, Inc. (FBLA-PBL). Imaging was conformed to the FBLA-PBL Trademark & Service Mark Policy to ensure all requirements were met.
