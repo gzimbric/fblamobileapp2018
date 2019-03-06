@@ -30,6 +30,8 @@ class AccountViewController: UIViewController {
         self.usernameTextField.alpha = 0.70
         self.registerButton.layer.cornerRadius = 5
         self.registerButton.alpha = 0.70
+        
+        self.hideKeyboardWhenTappedAround()
     }
 
     
@@ -81,5 +83,9 @@ class AccountViewController: UIViewController {
                     alertController.addAction(defaultAction)
                     
                     self.present(alertController, animated: true, completion: nil)
-                            }
-                        }}}}}
+                    }
+                }
+            }
+        }
+    }
+}

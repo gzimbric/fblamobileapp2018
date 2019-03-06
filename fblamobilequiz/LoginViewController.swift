@@ -35,13 +35,7 @@ class LoginViewController: UIViewController {
         self.loginButton.layer.cornerRadius = 5
         self.loginButton.alpha = 0.70
         
-        
-    }
-    
-    // Tap to Dismiss Keyboard
-    func dismissKeyboard() {
-        emailTextField.resignFirstResponder()
-        passwordTextField.resignFirstResponder()
+        self.hideKeyboardWhenTappedAround()
     }
     
     // Logs user in using Firebase
@@ -82,5 +76,17 @@ class LoginViewController: UIViewController {
                 }
             }
         }
+    }
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tapGesture = UITapGestureRecognizer(target: self,
+                                                action: #selector(hideKeyboard))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func hideKeyboard() {
+        view.endEditing(true)
     }
 }

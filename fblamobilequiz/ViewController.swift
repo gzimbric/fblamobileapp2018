@@ -16,11 +16,12 @@ class ViewController: UIViewController {
     let allQuestions = QuestionDB()
     var chosenAnswer : Bool = false
     var correctAnswer : Bool = false
-    var questionNumber : Int = 0
+    var questionNumber : Int = 1
     var score : Int = 0
     var maxScore : Int = 0
     let gameID = UUID().uuidString
     var posts = NSMutableArray()
+    var currentUser = Auth.auth().currentUser?.uid
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -34,6 +35,7 @@ class ViewController: UIViewController {
         refreshUI()
         
         self.navigationController?.navigationItem.backBarButtonItem?.title = "Back"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,13 +51,13 @@ class ViewController: UIViewController {
         checkAnswer()
         questionNumber+=1
         self.navigationController?.navigationBar.topItem?.title = "Question \(questionNumber)/15"
-        if questionNumber < 13 {
+        if questionNumber < 15 {
             questionLabel.text = allQuestions.list[questionNumber].question
             correctAnswer = allQuestions.list[questionNumber].answer
             refreshUI()
         } else {
             let alert = UIAlertController(title: "Quiz finished"
-                , message: "Save to cloud?"
+                , message: "Save to cloud? Final score: \(score)"
                 , preferredStyle: .alert)
             let alertAction = UIAlertAction(title: "Yes", style: .default) { (UIAlertAction) in
                 self.startOver()
@@ -63,6 +65,7 @@ class ViewController: UIViewController {
             }
             let alertAction2 = UIAlertAction(title: "No", style: .default) { (UIAlertAction) in
                 self.erase()
+                self.refreshUI()
             }
             alert.addAction(alertAction)
             alert.addAction(alertAction2)
@@ -122,8 +125,12 @@ class ViewController: UIViewController {
                                     }
                                 }
                     }
-            )}
-        else {
+            )} else if currentUser == nil {
+            let alert = UIAlertController(title: "Error", message: "Unable to upload to the cloud. Currently in guest mode.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            self.erase()
+        } else {
             let alert = UIAlertController(title: "Error", message: "Unable to upload to the cloud. Are you offline?", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)

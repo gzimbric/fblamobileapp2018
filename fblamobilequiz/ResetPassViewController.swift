@@ -24,6 +24,8 @@ class ResetPassViewController: UIViewController {
         self.emailTextField.alpha = 0.70
         self.resetButton.layer.cornerRadius = 5
         self.resetButton.alpha = 0.70
+        
+        self.hideKeyboardWhenTappedAround()
     }
     
     // Sends email to server for password reset

@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SafariServices
 
-class SupportTableViewController: UITableViewController {
+class SupportTableViewController: UITableViewController, SFSafariViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,16 @@ class SupportTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 3
+    }
+    
+    @IBAction func openSFSafariViewController(sender: AnyObject) {
+        let safariVC = SFSafariViewController(url: NSURL(string: "https://github.com/gzimbric/fblamobileapp2018/blob/master/README.md")! as URL)
+        self.present(safariVC, animated: true, completion: nil)
+        safariVC.delegate = self
+    }
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        controller.dismiss(animated: true, completion: nil)
     }
 
     /*
