@@ -56,7 +56,7 @@ Software Used
 
  - Xcode - IDE used to develop iOS applications
  - Swift - A fairly new programming language used within iOS applications
- - Firebase: A highly scabable realtime database used for QuizUP's backend
+ - Firebase - A highly scabable realtime database used for QuizUP's backend
 
 When developing QuizUP, I used Xcode by Apple as my IDE (Integrated Development Enviornment) and I also used the lastest version of Swift (Version 4.2.3 at publish date) as my programming language. I used CocoaPods to easily install Firebase to connect to my backend and my graphical UI knowledge to build the app's design.
 
